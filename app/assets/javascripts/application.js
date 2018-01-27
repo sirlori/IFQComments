@@ -13,5 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require handlebars-intl
+//= require handlebars
+//= require toastr
 //= require bootstrap
 //= require_tree .

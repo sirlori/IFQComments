@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start 'rails'
+puts "required simplecov"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 

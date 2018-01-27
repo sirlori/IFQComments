@@ -7,6 +7,7 @@ end
 
 gem 'binding_of_caller'
 gem 'mechanize'
+gem 'simplecov', :require => false, :group => :test
 gem 'active_hash'
 gem 'better_errors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

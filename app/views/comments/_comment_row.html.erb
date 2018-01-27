@@ -1,5 +1,5 @@
 <script id="comment-template" type="text/x-handlebars-template">
-  <div class="row comment-row" id="{{id}}">
+  <div class="row comment-row {{#if reply}}comment-with-reply{{/if}}" id="{{id}}">
   <div class="col-8 col-md-9"><img src="{{avatar}}"/>  <b>{{author}}</b></div><div class="col-4 col-md-3">{{formatDate date day="numeric" month="long" year="numeric" hour="numeric" minute="numeric"}}</div>
   <div class="col-12" style="margin-top:10px">{{content}}</div>
   {{#if reply}}

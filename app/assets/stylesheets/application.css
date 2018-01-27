@@ -15,3 +15,13 @@
  *= require bootstrap
  *= require_self
  */
+
+div.comment-with-reply{
+	cursor: pointer;
+}
+
+
+div.comment-with-reply:active {
+	cursor: pointer;
+	background-color: lightgray;
+}

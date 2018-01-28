@@ -115,6 +115,17 @@ $(document).ready(function(){
     }else{$('#go-button').addClass("disabled");}
   });
 
+
+  $('#article-search').keypress(function (e) {
+   var key = e.which;
+   if(key == 13)  
+    {
+      if(!$('#go-button').hasClass("disabled"))
+        $('#go-button').click();
+      return false;  
+    }
+  });   
+
   $('#go-button').on("click", function(){
     var settings = {
       "url": "/comments/get_comments",
@@ -128,7 +139,12 @@ $(document).ready(function(){
       comments.sort(function(c1, c2){
         return c2.table.date - c1.table.date
       })
-      displayComments();
+      if(comments.length)
+        displayComments();
+      else{
+        toastr.warning("Non sono presenti commenti nell'articolo selezionato", 'Attenzione!');
+        $('#comment_container').html("")
+      }
     }).fail(function(){
       $('#loader').addClass("d-none");
       $('#comment_container').html("");
